@@ -13,7 +13,35 @@
         <p>
             Climate change is one of the most pressing global issues of our time, and it is important that we take action to stop it. The impacts of climate change are already being felt around the world, from rising sea levels and more intense storms, to droughts and heat waves. These impacts can have devastating effects on communities, economies, and ecosystems. Furthermore, if we continue on our current path, the effects of climate change will only become more severe and widespread in the future. This being said, my groups project was a wakeup call for humans all around the world that climate change is real and really is happening, but there is ways of stopping and minimizing it.
         </p>
-        <video> IMG_138037244 (1).MOV </video>
+        <h2> Explaining the Code</h2>
+crickit.servo1.setAngle(180)
+crickit.servo2.setAngle(0)
+forever(function () {
+    if (crickit.touch1.touchRead() >= 800) {
+        pause(2000)
+        crickit.servo1.setAngle(90)
+        pause(100)
+        pause(1000)
+        crickit.servo2.setAngle(180)
+        pause(30000)
+        crickit.servo1.setAngle(180)
+        pause(1000)
+        crickit.servo2.setAngle(0)
+    }
+})
+forever(function () {
+    light.graph(crickit.touch1.touchRead(), 1000)
+})
+The code starts by setting the angle of the first servo motor (servo1) to 180 degrees and the second servo motor (servo2) to 0 degrees using the crickit.servo1.setAngle(180) and crickit.servo2.setAngle(0) commands.
+
+Then it uses the forever function which creates an infinite loop that repeatedly runs the code inside it. Inside the loop, the code uses the if statement to check the value of crickit.touch1.touchRead(), which is a reading of the touch sensor connected to the Crickit. If the value is greater than or equal to 800, the code inside the if block will execute.
+
+In the if block, the code uses the pause(2000) command to pause the program for 2 seconds, the crickit.servo1.setAngle(90) to set the angle of the first servo motor to 90 degrees, pause(100) to pause for 100 milliseconds, crickit.servo2.setAngle(180) to set the angle of the second servo motor to 180 degrees, and pause(30000) to pause for 30 seconds. Then it set the angle of the first servo motor to 180 degrees again and the angle of the second servo motor to 0 degrees, and pause for 1 second.
+
+The last command light.graph(crickit.touch1.touchRead(), 1000) displays the value of touchRead on a graph, with a range of 1000.
+
+In short, this code makes the two servo motors move in a specific sequence when the touch sensor is touched. The servos will move to 90, 180, 0 degrees and then repeat the sequence. The touch sensor reading is also displayed on a graph.
+            
 
 
     </body>
