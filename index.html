@@ -16,24 +16,8 @@
         </p>
         <h2> Explaining the Code</h2>
         <p>
-crickit.servo1.setAngle(180)
-crickit.servo2.setAngle(0)
-forever(function () {
-    if (crickit.touch1.touchRead() >= 800) {
-        pause(2000)
-        crickit.servo1.setAngle(90)
-        pause(100)
-        pause(1000)
-        crickit.servo2.setAngle(180)
-        pause(30000)
-        crickit.servo1.setAngle(180)
-        pause(1000)
-        crickit.servo2.setAngle(0)
-    }
-})
-forever(function () {
-    light.graph(crickit.touch1.touchRead(), 1000)
-})
+<img src="Screen Shot 2023-01-21 at 9.56.16 PM.png" alt="Image of My code" width="450">
+
 The code starts by setting the angle of the first servo motor (servo1) to 180 degrees and the second servo motor (servo2) to 0 degrees using the crickit.servo1.setAngle(180) and crickit.servo2.setAngle(0) commands.
 
 Then it uses the forever function which creates an infinite loop that repeatedly runs the code inside it. Inside the loop, the code uses the if statement to check the value of crickit.touch1.touchRead(), which is a reading of the touch sensor connected to the Crickit. If the value is greater than or equal to 800, the code inside the if block will execute.
